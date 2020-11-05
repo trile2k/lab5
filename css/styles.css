@@ -1,0 +1,225 @@
+/* CSS file for ITMD-361 Lab 5 – Create a valid, properly formatted HTML5 data table,
+ * fully styled with CSS.
+ */
+
+* { /* for all elements */
+  box-sizing: border-box; /*padding and border are included in the width and height */
+}
+
+.page-layout { /* Page layout for every web page */
+  max-width: 960px;
+  margin: 0 auto;
+  box-shadow: 4px 8px 10px 8px grey;
+  background-color: rgba(191, 191, 63, 0.3); /* light green */
+  border-radius: 0.9375em;
+  overflow-x:auto;
+}
+
+header { /* Header at the top of every web page */
+  font-family: 'Atma', cursive;
+  background-color: lightgrey;
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+body { /* Page body */
+  background-color: seashell;
+  margin-left: 1.25em; /* 1em = 16px */
+  padding-left: 0.625em;
+  padding-right: 1.25em;
+}
+
+h1, h2 { /* Heading 1 & 2 Common Setting */
+  color: blue;
+  font-family: 'Atma', cursive;
+  font-weight: 400;
+  text-align: center;
+  text-shadow: 2px 2px 5px red;
+  margin: 0;
+}
+
+h1 {
+  font-size: 300%;
+}
+
+h2 {
+  font-size: 270%;
+  padding-top: 0;
+}
+
+table {
+  font-family: 'Arima Madurai', cursive;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  height: 60px;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+footer { /* Page footer */
+  font-family: Arial, Helvetica, sans-serif; /* Native font */
+  height: 3.125em;
+  font-size: 1em;
+  background-color: lightgrey;
+  clear: both;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive layout - makes the 2 columns stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+} */
+
+
+/* Link on the page body */
+a.body-link:link {
+  color:red;
+}
+
+a.body-link:visited {
+  color:blue;
+}
+
+a.body-link:hover {
+  font-size:110%;
+}
+
+/* Link for image caption */
+a.img-link:link {
+  color:white;
+}
+
+a.img-link:visited {
+  color:red;
+}
+
+a.img-link:hover {
+  background:lightgreen;
+}
+
+/* Image box */
+figure {
+  border: thick black solid;
+  padding: 0;
+  margin: auto;
+  display: table;
+  background-color: black;
+  border-top: none;
+  padding-top: 0;
+  border-radius: 0 0 0.9375em 0.9375em;
+}
+
+/* Image Caption */
+figcaption {
+  font-family: 'Arima Madurai', cursive;
+  background-color: black;
+  color: white;
+  padding: 0.125em;
+  text-align: left;
+  display: table-caption;
+  caption-side: top;
+  max-width: 560px;
+  border: thick black solid;
+  border-bottom: none;
+  border-radius: 0.9375em 0.9375em 0 0;
+}
+
+.img-column { /* 2 column images */
+  float: left;
+  width: 50%;
+  padding: 0.25em;
+}
+
+/* Clearfix (clear floats) for next row of images*/
+.img-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+img { /* Image Setting */
+  align-self: center;
+  width: 28.125em;
+  height: 18.75em;
+  max-width:28.125em;
+  max-height: 18.75em;
+}
+
+
+/* Align left, center, right on a Resume line */
+.alignleft {
+  float: left;
+  width:33.33%;
+  text-align:left;
+  padding-left: 0.625em;
+  padding-top: 2.5em;
+  font-family: 'Arima Madurai', cursive;
+  font-size: 1em;
+}
+
+.aligncenter {
+  float: left;
+  width:33.33%;
+  text-align:center;
+  padding-top: 0.5em;
+  font-family: 'Arima Madurai', cursive;
+  font-size: 300%;
+  font-weight: 900;
+}
+
+.alignright {
+  float: left;
+  width:33.33%;
+  text-align:right;
+  padding-top: 2.5em;
+  padding-right: 1.25em;
+  font-family: 'Arima Madurai', cursive;
+  font-size: 1em;
+}​
+
+/* pseduo-element to take care of clearing float element */
+.clearfix::after {
+  padding-left: 0px;
+  padding-top: 0px;
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* Take care of overflow outside of container */
+.clearfix {
+  content: "";
+  clear: both;
+  display: block;
+  text-align:center;
+  font-family: 'Arima Madurai', cursive;
+  font-size: 150%;
+  font-weight: 900;
+  padding-top: 0.625em;
+}
