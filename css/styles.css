@@ -2,20 +2,25 @@
  * fully styled with CSS.
  */
 
-* { /* for all elements */
+/* Border box fix */
+html {
   box-sizing: border-box; /*padding and border are included in the width and height */
 }
 
-.page-layout { /* Page layout for every web page */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.page-layout { /* Page layout */
   max-width: 960px;
   margin: 0 auto;
   box-shadow: 4px 8px 10px 8px grey;
-  background-color: rgba(191, 191, 63, 0.3); /* light green */
+  background-color: rgba(191, 191, 63, 0.3);
   border-radius: 0.9375em;
   overflow-x:auto;
 }
 
-header { /* Header at the top of every web page */
+header { /* Header at the top of the page */
   font-family: 'Atma', cursive;
   background-color: lightgrey;
   text-align: center;
@@ -24,8 +29,7 @@ header { /* Header at the top of every web page */
 }
 
 body { /* Page body */
-  background-color: seashell;
-  margin-left: 1.25em; /* 1em = 16px */
+  background-color: lightskyblue;  
   padding-left: 0.625em;
   padding-right: 1.25em;
 }
@@ -48,6 +52,7 @@ h2 {
   padding-top: 0;
 }
 
+/* Table setting */
 table {
   font-family: 'Arima Madurai', cursive;
   border-collapse: collapse;
@@ -56,6 +61,8 @@ table {
 
 table th, table td {
   border: 1px solid #ddd;
+  text-align: center;
+  font-weight: bold;
   padding: 8px;
   height: 60px;
 }
@@ -63,9 +70,11 @@ table th, table td {
 table th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: center;
-  background-color: #4CAF50;
+  background-color: black;
   color: white;
+  vertical-align: bottom;
+  font-size: 130%;
+  font-weight: 600;
 }
 
 table tr:nth-child(even) {
@@ -76,150 +85,63 @@ table tr:hover {
   background-color: #ddd;
 }
 
+tr td:first-child {
+  font-weight: bolder;
+  text-align: left;
+  font-size: 110%;
+}
+
+img { /* Image Setting */
+  align-self: center;
+  height: auto;
+  max-width:100%;
+  display: block;
+  padding: 1em;
+}
+
+p {
+  text-align: center;
+  box-sizing: content-box;
+  clear:both;
+}
+
+/* Color for different planet */
+.earth {
+  color: blue;
+}
+
+.mars {
+  color: red;
+}
+
+.venus {
+  color: orangered;
+}
+
+.saturn {
+  color: brown;
+}
+
 footer { /* Page footer */
   font-family: Arial, Helvetica, sans-serif; /* Native font */
-  height: 3.125em;
-  font-size: 1em;
+  height: 4em;
+  font-size: 1.25em;
   background-color: lightgrey;
-  clear: both;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Responsive layout - makes the 2 columns stack on top of each other instead of next to each other */
-/* @media screen and (max-width: 500px) {
-  .column {
-    width: 100%;
-  }
-} */
-
-
-/* Link on the page body */
-a.body-link:link {
+/* Link on footer */
+a.footer-link:link {
   color:red;
 }
 
-a.body-link:visited {
+a.footer-link:visited {
   color:blue;
 }
 
-a.body-link:hover {
+a.footer-link:hover {
   font-size:110%;
-}
-
-/* Link for image caption */
-a.img-link:link {
-  color:white;
-}
-
-a.img-link:visited {
-  color:red;
-}
-
-a.img-link:hover {
-  background:lightgreen;
-}
-
-/* Image box */
-figure {
-  border: thick black solid;
-  padding: 0;
-  margin: auto;
-  display: table;
-  background-color: black;
-  border-top: none;
-  padding-top: 0;
-  border-radius: 0 0 0.9375em 0.9375em;
-}
-
-/* Image Caption */
-figcaption {
-  font-family: 'Arima Madurai', cursive;
-  background-color: black;
-  color: white;
-  padding: 0.125em;
-  text-align: left;
-  display: table-caption;
-  caption-side: top;
-  max-width: 560px;
-  border: thick black solid;
-  border-bottom: none;
-  border-radius: 0.9375em 0.9375em 0 0;
-}
-
-.img-column { /* 2 column images */
-  float: left;
-  width: 50%;
-  padding: 0.25em;
-}
-
-/* Clearfix (clear floats) for next row of images*/
-.img-row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-
-
-img { /* Image Setting */
-  align-self: center;
-  width: 28.125em;
-  height: 18.75em;
-  max-width:28.125em;
-  max-height: 18.75em;
-}
-
-
-/* Align left, center, right on a Resume line */
-.alignleft {
-  float: left;
-  width:33.33%;
-  text-align:left;
-  padding-left: 0.625em;
-  padding-top: 2.5em;
-  font-family: 'Arima Madurai', cursive;
-  font-size: 1em;
-}
-
-.aligncenter {
-  float: left;
-  width:33.33%;
-  text-align:center;
-  padding-top: 0.5em;
-  font-family: 'Arima Madurai', cursive;
-  font-size: 300%;
-  font-weight: 900;
-}
-
-.alignright {
-  float: left;
-  width:33.33%;
-  text-align:right;
-  padding-top: 2.5em;
-  padding-right: 1.25em;
-  font-family: 'Arima Madurai', cursive;
-  font-size: 1em;
-}​
-
-/* pseduo-element to take care of clearing float element */
-.clearfix::after {
-  padding-left: 0px;
-  padding-top: 0px;
-  content: "";
-  clear: both;
-  display: block;
-}
-
-/* Take care of overflow outside of container */
-.clearfix {
-  content: "";
-  clear: both;
-  display: block;
-  text-align:center;
-  font-family: 'Arima Madurai', cursive;
-  font-size: 150%;
-  font-weight: 900;
-  padding-top: 0.625em;
+  color:green;
 }

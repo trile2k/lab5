@@ -16,78 +16,76 @@
   <body>
     <div class="page-layout">
       <header>
-        <!-- ' = 39 UTF-8 decimal
-             - = 45 UTF-8 decimal
-             / = 47 UTF-8 decimal
+        <!-- & = 38 UTF-8 decimal
+             x = 215 UTF-8 decimal (multiplication sign)
+             ( = 40 UTF-8 decimal
+             ) = 41 UTF-8 decimal
         -->
         <h1>Welcome to My 4 Favorite Planets</h1>
-        <h2>& Their Profiles</h2>
+        <h2>&#38; Their Profiles</h2>
       </header>
       <table>
         <tr>
           <th>Planet Profile</th>
-          <th>Earth</th>
-          <th>Mars</th>
-          <th>Venus</th>
-          <th>Saturn</th>
+          <th><img src="images/earth.gif" alt="Earth Image">Earth</th>
+          <th><img src="images/mars.gif" alt="Mars Image">Mars</th>
+          <th><img src="images/venus.gif" alt="Venus Image">Venus</th>
+          <th><img src="images/saturn.gif" alt="Saturn Image">Saturn</th>
         </tr>
         <tr>
-          <td>Mass (kg)</td>
-          <td>5.98 x 10^24</td>
-          <td>6.42 x 10^23</td>
-          <td>4.87 x 10^24</td>
-          <td>5.69 x 10^26</td>
+          <td>Mass &#40;kg&#41;</td>
+          <td class="earth">5.98 &#215; 10<sup>24</sup></td>
+          <td class="mars">6.42 &#215; 10<sup>23</sup></td>
+          <td class="venus">4.87 &#215; 10<sup>24</sup></td>
+          <td class="saturn">5.69 &#215; 10<sup>26</sup></td>
         </tr>
         <tr>
-          <td>Diameter (km)</td>
-          <td>12,756</td>
-          <td>6,787</td>
-          <td>12,104</td>
-          <td>120,660</td>
+          <td>Diameter &#40;km&#41;</td>
+          <td class="earth">12,756</td>
+          <td class="mars">6,787</td>
+          <td class="venus">12,104</td>
+          <td class="saturn">120,660</td>
         </tr>
         <tr>
-          <td>Mean density (kg/m^3)</td>
-          <td>5,520</td>
-          <td>3,940</td>
-          <td>5,250</td>
-          <td>690</td>
+          <td>Mean density &#40;kg/m<sup>3</sup>&#41;</td>
+          <td class="earth">5,520</td>
+          <td class="mars">3,940</td>
+          <td class="venus">5,250</td>
+          <td class="saturn">690</td>
         </tr>
         <tr>
-          <td>Escape velocity (m/s)</td>
-          <td>11,200</td>
-          <td>5,000</td>
-          <td>10,400</td>
-          <td>35,600</td>
+          <td>Escape velocity &#40;m/s&#41;</td>
+          <td class="earth">11,200</td>
+          <td class="mars">5,000</td>
+          <td class="venus">10,400</td>
+          <td class="saturn">35,600</td>
         </tr>
         <tr>
           <td>Average distance from Sun</td>
-          <td>1 AU (149,597,890 km)</td>
-          <td>1.524 AU (227,936,640 km)</td>
-          <td>0.723 AU (108,208,930 km)</td>
-          <td>9.537 AU (1,426,725,400 km)</td>
+          <td class="earth">1 AU &#40;149,597,890 km&#41;</td>
+          <td class="mars">1.524 AU &#40;227,936,640 km&#41;</td>
+          <td class="venus">0.723 AU &#40;108,208,930 km&#41;</td>
+          <td class="saturn">9.537 AU &#40;1,426,725,400 km&#41;</td>
         </tr>
         <tr>
-          <td>Rotation period (length of day in Earth days)</td>
-          <td>1 (23.93 hours)</td>
-          <td>1.026</td>
-          <td>243.02 (retrograde)</td>
-          <td>0.44 (10.2 Earth hours)</td>
+          <td>Rotation period &#40;length of day in Earth days&#41;</td>
+          <td class="earth">1 &#40;23.93 hours&#41;</td>
+          <td class="mars">1.026</td>
+          <td class="venus">243.02 &#40;retrograde&#41;</td>
+          <td class="saturn">0.44 &#40;10.2 Earth hours&#41;</td>
         </tr>
         <tr>
-          <td>Revolution period (length of year in Earth days)</td>
-          <td>365.26</td>
-          <td>686.98</td>
-          <td>224.7</td>
-          <td>29.46</td>
+          <td>Revolution period &#40;length of year in Earth days&#41;</td>
+          <td class="earth">365.26</td>
+          <td class="mars">686.98</td>
+          <td class="venus">224.7</td>
+          <td class="saturn">29.46</td>
         </tr>
       </table>
-      <!-- Footer for email contact info -->
+      <!-- Footer for the link to the source of info -->
       <footer>
-        Created by Tri Le -
-        <address>
-          <!-- @ = 64 UTF-8 decimal -->
-          <a href="mailto:tle28&#64;hawk.itt.edu?subject=feedback">tle28&#64;hawk.iit.edu</a>
-        </address>
+        <a class="footer-link" href="https://pds.jpl.nasa.gov/planets/special/planets.htm">Planets Data and
+          Images extracted from NASA</a>
       </footer>
     </div>
   </body>
