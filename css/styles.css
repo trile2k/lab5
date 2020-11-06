@@ -29,7 +29,7 @@ header { /* Header at the top of the page */
 }
 
 body { /* Page body */
-  background-color: lightskyblue;  
+  background-color: lightskyblue;
   padding-left: 0.625em;
   padding-right: 1.25em;
 }
